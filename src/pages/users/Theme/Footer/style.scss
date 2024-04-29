@@ -1,0 +1,123 @@
+@use "sass:map";
+@import "styles/pages/theme";
+
+.footer{
+    padding: 70px 0 0;
+    background-color: #F3F6FA;
+
+    .footer__about{
+        margin: 0 30px 30px 0;
+
+
+        .footer__about__logo {
+            margin-bottom: 15px;
+            display: inline-block;
+        
+        }
+
+        ul li {
+            font-size: 15px;
+            color: map.get($theme-colors, "normal-text");
+            line-height: 36px;
+            list-style: none;
+
+        }
+    }
+
+    .footer__widget {
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        h6 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: map.get($theme-colors, "normal-text");
+        }
+
+        ul {
+            float: left;
+            width: 50%;
+
+            li{
+                list-style: none;
+
+                a{
+                    font-size: 14px;
+                    line-height: 32px;
+                    text-decoration: none;
+                    color: map.get($theme-colors, "normal-text");
+
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: map.get($theme-colors, "normal-text");
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 30px;
+
+            .input-group{
+                display: flex;
+                align-items: center;
+
+                input{
+                    font-size: 16px;
+                    width: 100%;
+                    height: 46px;
+                    padding-left: 20px;
+                    border: 1px solid #ededed;
+                    color: map.get($theme-colors, "normal-text");
+                
+                    ::placeholder {
+                        color: map.get($theme-colors, "normal-text");
+    
+                    }
+                }
+    
+                button {
+                    height: 46px;
+                    padding: 0 26px;
+                    min-width: max-content;
+                }
+            }
+
+        }
+
+    }
+
+    .footer__widget__social {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-top: 10px;
+
+        div {
+            :hover {
+                background-color: map.get($theme-colors, "primary");
+                color: map.get($theme-colors, "white-text");
+                border-color: map.get($theme-colors, "white-text");
+
+            }
+
+            svg {
+                font-size: 20px;
+                padding: 10px;
+                color: #404040;
+                border: 1px solid #ededed;
+                border-radius: 50%;
+                transition: all, 0.3s;
+                background-color: map.get($theme-colors, "white-text");
+                cursor: pointer;
+
+            }
+        }
+
+    }
+
+
+}
